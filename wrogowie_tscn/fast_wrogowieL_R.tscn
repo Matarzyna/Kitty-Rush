@@ -163,7 +163,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_gbj3c"]
 radius = 5.09902
 
-[node name="slimeLR" type="Node2D"]
+[node name="slimeLR" type="Node2D" groups=["main_game_elements"]]
 scale = Vector2(0.9, 0.9)
 script = SubResource("GDScript_exyag")
 

@@ -111,7 +111,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_up6eu"]
 radius = 5.09902
 
-[node name="SlimeUD" type="Node2D"]
+[node name="SlimeUD" type="Node2D" groups=["main_game_elements"]]
 scale = Vector2(0.9, 0.9)
 script = ExtResource("1_g7xnq")
 
