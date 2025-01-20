@@ -4,6 +4,8 @@ const NORMAL_SPEED = 40      # Normalna prędkość
 const CHASE_SPEED = 60       # Przyspieszona prędkość
 const DETECTION_RANGE = 30  # Zasięg wykrywania postaci
 
+@export var damage = 1
+
 var direction = -1
 var player = null  # Referencja do postaci gracza
 @onready var ray_cast_down: RayCast2D = $RayCastDown
@@ -17,6 +19,9 @@ func _ready():
 		player = players[0]
 	else:
 		print("Nie znaleziono gracza w grupie 'player'!")
+		
+	var killzone = get_node("Killzone")
+	killzone.damage = damage
 		
 func _process(delta: float) -> void:
 	var speed = NORMAL_SPEED

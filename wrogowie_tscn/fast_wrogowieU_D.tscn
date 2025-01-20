@@ -65,6 +65,7 @@ animations = [{
 radius = 5.09902
 
 [node name="SlimeUD" type="Node2D"]
+scale = Vector2(0.9, 0.9)
 script = ExtResource("1_g7xnq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -77,11 +78,11 @@ flip_h = true
 
 [node name="RayCastDown" type="RayCast2D" parent="."]
 position = Vector2(0, -4)
-target_position = Vector2(0, 10)
+target_position = Vector2(0, 5)
 
 [node name="RayCastUp" type="RayCast2D" parent="."]
 position = Vector2(0, -4)
-target_position = Vector2(0, -10)
+target_position = Vector2(0, -7)
 
 [node name="Killzone" parent="." instance=ExtResource("3_eyere")]
 
