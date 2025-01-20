@@ -14,9 +14,9 @@ var current_position = Vector2(-104,80)
 
 var bushes_state = {}  # Przechowuje stany krzaków
 var cats_state = {}  # Przechowuje stany kotków
+var boxes_state = {} # Przechowuje stany kartonow
 var gruby_cats_state = {}  # Przechowuje stany grubych kotków
 var chests_state = {}  # Przechowuje stany skrzynek
-var Cat_chests_state = {}  # Przechowuje stany skrzynek
 
 func set_paused(is_paused):
 	paused = is_paused
@@ -47,8 +47,13 @@ func reset_bushes_state():
 func reset_chests_state():
 	for chest in chests_state:
 		chests_state[chest] = {"is_opened": false}
-	for c in Cat_chests_state:
-		Cat_chests_state[c] = {"is_opened": false}
+
+func reset_boxes_state():
+	var boxes = get_tree().get_nodes_in_group("Box")
+	for box in boxes:
+		if box.has_method("reset_box"):
+			box.reset_box()
+			print("Zresetowano karton: ", box.name)
 
 func reset_game():
 	reset_kitty_counter()
@@ -58,3 +63,4 @@ func reset_game():
 	reset_gruby_cats_state()
 	reset_bushes_state()
 	reset_chests_state()
+	reset_boxes_state()

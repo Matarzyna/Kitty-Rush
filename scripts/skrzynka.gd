@@ -12,6 +12,17 @@ var ruchome = false;
 var dalej = true
 var poczekac = false
 
+var starting_position = position
+var saving_position = Vector2()
+
+func _ready() -> void:
+	if Global.boxes_state.has(name):
+		var state = Global.boxes_state[name]
+		set_state(state)
+	else:
+		print("Brak zapisanego stanu dla kartonu:", name)
+		starting_position = position
+
 func _physics_process(delta):
 	# Add the gravity.
 	ray_down.set_target_position(Vector2.DOWN * 9)
@@ -56,6 +67,7 @@ func _physics_process(delta):
 							move(Vector2.DOWN)
 	else:
 		is_fall = false
+	saving_position = position
 
 func start_movement(direction: Vector2):
 	ray.set_target_position(direction * 16)
@@ -77,9 +89,12 @@ func move(direction: Vector2):
 func move_false():
 	is_moving = false
 
+func reset_box():
+	position = starting_position
 
-
-
+func set_state(state: Dictionary):
+	position = state.get("position", starting_position)
+	print("Pozycja pudełka wczytana:", position)
 
 func _on_killzone_area_entered(area: Area2D) -> void:
 	print("Obszar wykryty:", area.name)
