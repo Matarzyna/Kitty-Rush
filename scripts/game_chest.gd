@@ -29,7 +29,7 @@ func _open_chest() -> void:
 	is_opening = false
 
 	_start_minigame()
-	
+
 
 	
 
@@ -39,13 +39,12 @@ func _start_minigame() -> void:
 	if not minigame_scene:
 		print("Błąd: Nie udało się załadować minigry.")
 		return
+		
 	var minigame_instance = minigame_scene.instantiate()
 	get_tree().root.add_child(minigame_instance)
-	
-	if minigame_instance._get_is_game_won():
-		spawn_key()
 
-
+	spawn_key()
+		
 func spawn_key() -> void:
 	var Key_instance = Key_scene.instantiate()
 	Key_instance.position = global_position + Vector2(0, 0)

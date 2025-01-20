@@ -3,6 +3,7 @@ extends Area2D
 var is_collected = false
 
 func _on_body_entered(_body: Node2D) -> void:
+	
 	if is_collected:
 		return
 	is_collected = true

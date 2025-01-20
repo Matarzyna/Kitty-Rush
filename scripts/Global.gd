@@ -17,6 +17,8 @@ var cats_state = {}  # Przechowuje stany kotków
 var gruby_cats_state = {}  # Przechowuje stany grubych kotków
 var chests_state = {}  # Przechowuje stany skrzynek
 var Cat_chests_state = {}  # Przechowuje stany skrzynek
+var game_chests_state = {}  # Przechowuje stany skrzynek
+var Key_state = {}  # Przechowuje stany kluczy
 
 func set_paused(is_paused):
 	paused = is_paused
@@ -49,6 +51,8 @@ func reset_chests_state():
 		chests_state[chest] = {"is_opened": false}
 	for c in Cat_chests_state:
 		Cat_chests_state[c] = {"is_opened": false}
+	for gamechest in game_chests_state:
+		game_chests_state[gamechest] = {"is_opened": false}
 
 func reset_game():
 	reset_kitty_counter()
