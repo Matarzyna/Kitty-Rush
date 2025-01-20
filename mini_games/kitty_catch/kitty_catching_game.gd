@@ -12,6 +12,10 @@ var catchingValue := 0.0
 var isCatchComplete := false  # Flaga oznaczająca zakończenie łapania
 var is_game_active := false  # Czy gra jest aktywna
 
+var is_game_won:=false
+
+
+
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	if target:
@@ -88,11 +92,15 @@ func _cat_caught() -> void:
 	timer.timeout.connect(_close_game)
 
 func _close_game() -> void:
+	is_game_won = true
 	print("Zamykanie gry...")
 	_cat_caught()
 	queue_free() 
+	
 	resume()
+	
 
+	
 func _on_target_target_entered() -> void:
 	# Zdarzenie: kot został złapany
 	onCatch = true
@@ -110,3 +118,6 @@ func resume():
 	Global.set_paused(false)
 	for node in get_tree().get_nodes_in_group("main_game_elements"):
 		node.process_mode = Node.PROCESS_MODE_INHERIT
+		
+func _get_is_game_won() -> bool:
+	return is_game_won

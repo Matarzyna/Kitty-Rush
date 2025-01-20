@@ -6,6 +6,9 @@ extends Node2D
 var is_opening: bool = false
 var is_opened: bool = false
 
+const KEY_SCENE_PATH := "res://złoty_klucz.tscn"
+var Key_scene: PackedScene = preload(KEY_SCENE_PATH)
+
 func _ready() -> void:
 	game_chest_area_2d.body_entered.connect(_on_body_entered)
 
@@ -21,10 +24,14 @@ func _open_chest() -> void:
 	await get_tree().create_timer(animation_length).timeout
 
 	game_chest_sprite.play("opened")
+	
 	is_opened = true
 	is_opening = false
 
 	_start_minigame()
+	
+
+	
 
 func _start_minigame() -> void:
 	pause()
@@ -32,11 +39,20 @@ func _start_minigame() -> void:
 	if not minigame_scene:
 		print("Błąd: Nie udało się załadować minigry.")
 		return
-
 	var minigame_instance = minigame_scene.instantiate()
 	get_tree().root.add_child(minigame_instance)
+	
+	if minigame_instance._get_is_game_won:
+		spawn_key()
 
 
+func spawn_key() -> void:
+	var Key_instance = Key_scene.instantiate()
+	Key_instance.position = global_position + Vector2(0, 0)
+	print("Pozycja klucza:", Key_instance.position)
+	get_parent().add_child(Key_instance)
+	
+	
 func pause():
 	Global.set_paused(true)
 	for node in get_tree().get_nodes_in_group("main_game_elements"):
