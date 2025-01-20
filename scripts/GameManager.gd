@@ -93,7 +93,9 @@ func check_life(life: int):
 func show_game_over_screen():
 	$CanvasLayer.visible = false
 	$CanvasLayerKC.visible = false
+	$FatCatCounter.visible = false
 	$GameOverCanvas.visible = true
+	
 	get_tree().paused = true
 	
 	var pause_menu = get_node("/root/Levels/PauseCanvas")
