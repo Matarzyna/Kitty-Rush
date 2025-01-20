@@ -11,7 +11,7 @@ var is_moving = false  # Flaga kontrolująca, czy postać obecnie się porusza
 var move_direction = Vector2.ZERO  # Kierunek ruchu
 var move_timer = 0.0  # Licznik czasu dla ruchu
 var start_position = Vector2.ZERO  # Pozycja początkowa ruchu
-var ray_range = 23
+var ray_range = 21
 
 var is_destroy = false
 var is_lost_hp = false

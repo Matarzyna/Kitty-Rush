@@ -59,8 +59,8 @@ func _physics_process(delta):
 
 func start_movement(direction: Vector2):
 	ray.set_target_position(direction * 16)
-	ray.force_raycast_update()
-	if !ray.is_colliding() :
+	ray.force_raycast_update() 
+	if !ray.is_colliding():
 		move(direction)
 		return true
 	else:
@@ -70,7 +70,7 @@ func move(direction: Vector2):
 	if is_moving == false:
 		is_moving = true
 		var tween = create_tween()
-		tween.tween_property(self,"position", position + direction* 16, 0.4)
+		tween.tween_property(self,"position", position + direction* 16, 0.3)
 		tween.tween_callback(move_false)
 		print("3")
 
