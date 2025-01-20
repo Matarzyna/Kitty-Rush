@@ -8,6 +8,7 @@ size = Vector2(16.485, 22.7707)
 
 [node name="Kluczyk" type="Area2D"]
 scale = Vector2(0.38798, 0.371287)
+collision_mask = 4
 script = ExtResource("1_1a5jj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

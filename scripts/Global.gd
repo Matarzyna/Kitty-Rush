@@ -6,8 +6,8 @@ var pause_menu = null
 
 var cat_counter = 0  # Licznik zwykłych kotków
 var gruby_cat_counter = 0  # Licznik grubych kotków
-var key_counter = 0
-
+var key_counter = false
+signal wygranaMinigra
 var life = 5
 var globalLife = 5
 var death_position = Vector2(-104,80)

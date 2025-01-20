@@ -29,6 +29,7 @@ func _on_body_exited(body: Node) -> void:
 
 func _open_chest() -> void:
 	is_opening = true
+	
 	game_chest_sprite.play("opening")
 	
 	var animation_length = game_chest_sprite.sprite_frames.get_frame_count("opening") / game_chest_sprite.sprite_frames.get_animation_speed("opening")
@@ -38,7 +39,8 @@ func _open_chest() -> void:
 	
 	is_opened = true
 	is_opening = false
-
+	
+	Global.is_mini_game_won = false
 	_start_minigame()
 
 func _start_minigame() -> void:
@@ -51,10 +53,11 @@ func _start_minigame() -> void:
 	var minigame_instance = minigame_scene.instantiate()
 	get_tree().root.add_child(minigame_instance)
 	
-	if Global.is_mini_game_won:
-		spawn_key()
-		
+	Global.connect("wygranaMinigra", spawn_key)
+	
 func spawn_key() -> void:
+	print("spawn_key wywołane")
+	Global.disconnect("wygranaMinigra", spawn_key)
 	var Key_instance = Key_scene.instantiate()
 	Key_instance.position = global_position + Vector2(0, 0)
 	print("Pozycja klucza:", Key_instance.position)
