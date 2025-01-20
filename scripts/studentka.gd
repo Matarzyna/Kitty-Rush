@@ -87,7 +87,8 @@ func handle_input():
 			if ray.get_collider().is_in_group("bushes"):
 				start_attack(face_direction)
 			elif ray.get_collider().is_in_group("Box"):
-				ray.get_collider().start_movement(Vector2.LEFT)
+				if ray.get_collider().start_movement(Vector2.LEFT):
+					start_movement(Vector2.LEFT, "walk_l")
 	
 	elif Input.is_action_pressed("ui_right"):
 		ray.set_target_position(Vector2.RIGHT * ray_range)
@@ -99,7 +100,8 @@ func handle_input():
 			if ray.get_collider().is_in_group("bushes"):
 				start_attack(face_direction)
 			elif ray.get_collider().is_in_group("Box"):
-				ray.get_collider().start_movement(Vector2.RIGHT)
+				if ray.get_collider().start_movement(Vector2.RIGHT):
+					start_movement(Vector2.RIGHT, "walk_r")
 	
 	else:
 		if (face_direction == "right"):

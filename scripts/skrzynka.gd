@@ -41,7 +41,7 @@ func _physics_process(delta):
 				if ray_down.get_collider().is_in_group('Box') :
 					ray.set_target_position(Vector2.RIGHT * 23)
 					ray.force_raycast_update()
-					if (!ray.get_collider() and !$RayCastRight.is_colliding()) or ($RayCastRight.get_collider() and !$RayCastRight.is_colliding().is_in_group('player')):
+					if (!ray.get_collider() and !$RayCastRight.is_colliding()) or ($RayCastRight.get_collider() and !$RayCastRight.get_collider().is_in_group('player')):
 						move(Vector2.RIGHT)
 						is_fall = true
 						ruchome = true
@@ -49,7 +49,7 @@ func _physics_process(delta):
 					else:
 						ray.set_target_position(Vector2.LEFT * 23)
 						ray.force_raycast_update()
-						if (!ray.get_collider() and !$RayCastLeft.is_colliding()) or ($RayCastLeft.get_collider() and !$RayCastLeft.is_colliding().is_in_group('player')):
+						if (!ray.get_collider() and !$RayCastLeft.is_colliding()) or ($RayCastLeft.get_collider() and !$RayCastLeft.get_collider().is_in_group('player')):
 							move(Vector2.LEFT)
 							is_fall = true
 							ruchome = true
@@ -62,6 +62,9 @@ func start_movement(direction: Vector2):
 	ray.force_raycast_update()
 	if !ray.is_colliding() :
 		move(direction)
+		return true
+	else:
+		return false
 
 func move(direction: Vector2):
 	if is_moving == false:

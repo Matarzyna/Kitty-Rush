@@ -276,3 +276,4 @@ zoom = Vector2(5, 5)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_wruns")
+one_way_collision_margin = 0.0
