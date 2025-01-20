@@ -134,7 +134,7 @@ script = ExtResource("1_ooien")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_38u0y")
-animation = &"ClosedCat"
+animation = &"OpenCat"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 2
