@@ -78,6 +78,7 @@ func _cat_caught() -> void:
 	if target and is_instance_valid(target):
 		target.queue_free()
 		
+	Global.is_mini_game_won = true
 	# Wyświetl wiadomość
 	message_label.text = "You caught the kitty!"
 	message_label.visible = true

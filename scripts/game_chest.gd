@@ -51,7 +51,8 @@ func _start_minigame() -> void:
 	var minigame_instance = minigame_scene.instantiate()
 	get_tree().root.add_child(minigame_instance)
 	
-	spawn_key()
+	if Global.is_mini_game_won:
+		spawn_key()
 		
 func spawn_key() -> void:
 	var Key_instance = Key_scene.instantiate()

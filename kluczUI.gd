@@ -1,11 +1,12 @@
 extends CanvasLayer
+	
+var key_count = Global.key_counter
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func update_sprite_status():
+	#Gdy nie ma kluczy to nie pokazuj że jest klucz
+	var sprite = $Sprite2D
+	if key_count > 0:
+		sprite.visible = true
+	else:
+		sprite.visible = false
+		
