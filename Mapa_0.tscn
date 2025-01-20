@@ -1,7 +1,7 @@
 [gd_scene load_steps=69 format=4 uid="uid://cg2de6wjkemhw"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_bb18c"]
-[ext_resource type="Texture2D" uid="uid://b6neg4hgcnti1" path="res://assets/sprite sheet 16x16px seamless textures.png" id="1_or2n3"]
+[ext_resource type="Texture2D" uid="uid://b6neg4hgcnti1" path="res://assets/Tiny Wonder UI Free/sprite sheet 16x16px seamless textures.png" id="1_or2n3"]
 [ext_resource type="PackedScene" uid="uid://dkg5oq12g8h0l" path="res://life_canvas_layer.tscn" id="2_g4ab4"]
 [ext_resource type="Script" path="res://scripts/save_manager.gd" id="2_s5fve"]
 [ext_resource type="Texture2D" uid="uid://oiekbjeyn6uw" path="res://assets/rozowe cegielki.png" id="3_1g3ng"]
@@ -4264,15 +4264,12 @@ position = Vector2(1240, 72)
 
 [node name="SlimeUD21" parent="Slimes" instance=ExtResource("14_wrn8i")]
 position = Vector2(1000, -16)
-script = null
 
 [node name="SlimeUD22" parent="Slimes" instance=ExtResource("14_wrn8i")]
 position = Vector2(1032, -24)
-script = null
 
 [node name="SlimeUD23" parent="Slimes" instance=ExtResource("14_wrn8i")]
 position = Vector2(1064, -24)
-script = null
 
 [node name="slimeLR10" parent="Slimes" instance=ExtResource("13_8ya4u")]
 position = Vector2(984, -56)
