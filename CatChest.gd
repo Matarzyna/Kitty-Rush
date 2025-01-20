@@ -40,7 +40,7 @@ func _open_chest() -> void:
 	cat_chest_sprite.play("OpeningCat")  # Odtwórz animację otwierania
 	var animation_length = cat_chest_sprite.sprite_frames.get_frame_count("OpeningCat") / cat_chest_sprite.sprite_frames.get_animation_speed("opening")
 	await get_tree().create_timer(animation_length).timeout
-	cat_chest_sprite.play("OpenedCat")  # Przejdź do stanu otwartego
+	cat_chest_sprite.play("OpenCat")  # Przejdź do stanu otwartego
 	is_opened = true
 	is_opening = false
 	# Twórz kota po otwarciu skrzyni
@@ -55,7 +55,7 @@ func _spawn_cat() -> void:
 func set_state(state):
 	is_opened = state.get("is_opened", false)
 	if is_opened:
-		$AnimatedSprite2D.play("OpenedCat")  # Ustaw stan otwartej skrzyni
+		$AnimatedSprite2D.play("OpenCat")  # Ustaw stan otwartej skrzyni
 	else:
 		$AnimatedSprite2D.play("ClosedCat")  # Ustaw stan zamkniętej skrzyni
 	print("Stan skrzyni ustawiony:", name, "is_opened:", is_opened)
