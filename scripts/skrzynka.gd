@@ -84,7 +84,6 @@ func move(direction: Vector2):
 		var tween = create_tween()
 		tween.tween_property(self,"position", position + direction* 16, 0.3)
 		tween.tween_callback(move_false)
-		print("3")
 
 func move_false():
 	is_moving = false
