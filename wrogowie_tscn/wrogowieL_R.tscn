@@ -11,6 +11,7 @@ const SPEED = 40
 @export var damage = 1
 
 var direction = -1
+
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -19,14 +20,16 @@ func _ready() -> void:
 	var killzone = get_node(\"Killzone\")
 	killzone.damage = damage
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if ray_cast_right.is_colliding():
+	if ray_cast_right and ray_cast_right.is_colliding():
 		direction = -1
 		animated_sprite.flip_h = true
-	if ray_cast_left.is_colliding():
+
+	if ray_cast_left and ray_cast_left.is_colliding():
 		direction = 1
 		animated_sprite.flip_h = false
+
+		
 	position.x += direction * SPEED * delta
 "
 
@@ -108,4 +111,5 @@ position = Vector2(0, -5)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" groups=["wrogowie"]]
 top_level = true
 visibility_layer = 8
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_gbj3c")

@@ -82,5 +82,5 @@ visibility_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" groups=["wrogowie"]]
 visibility_layer = 8
-position = Vector2(0, -4)
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_up6eu")

@@ -32,7 +32,6 @@ func _ready():
 	var killzone = get_node(\"Killzone\")
 	killzone.damage = damage
 	
-		
 func _process(delta: float) -> void:
 	var speed = NORMAL_SPEED
 	
@@ -45,10 +44,10 @@ func _process(delta: float) -> void:
 		else:
 			slime.play(\"normal\")
 	# Wykrywanie kolizji z użyciem RayCast2D
-	if ray_cast_right.is_colliding():
+	if ray_cast_right and ray_cast_right.is_colliding():
 		direction = -1
 		slime.flip_h = true
-	if ray_cast_left.is_colliding():
+	if ray_cast_left and ray_cast_left.is_colliding():
 		direction = 1
 		slime.flip_h = false
 	

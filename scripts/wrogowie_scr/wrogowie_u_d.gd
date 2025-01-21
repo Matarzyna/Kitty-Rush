@@ -13,12 +13,11 @@ func _ready() -> void:
 	var killzone = get_node("Killzone")
 	killzone.damage = damage
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if ray_cast_up.is_colliding():
+	if ray_cast_up and ray_cast_up.is_colliding():
 		direction = 1
 		animated_sprite.flip_h = true
-	if ray_cast_down.is_colliding():
+	if ray_cast_down and ray_cast_down.is_colliding():
 		direction = -1
 		animated_sprite.flip_h = false
 	position.y+= direction * SPEED * delta

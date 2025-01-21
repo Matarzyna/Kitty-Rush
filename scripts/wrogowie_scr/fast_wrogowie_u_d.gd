@@ -36,10 +36,10 @@ func _process(delta: float) -> void:
 		else:
 			slime.play("default")
 		
-	if ray_cast_up.is_colliding():
+	if ray_cast_up and ray_cast_up.is_colliding():
 		direction = 1
 		slime.flip_h = true
-	if ray_cast_down.is_colliding():
+	if ray_cast_down and ray_cast_down.is_colliding():
 		direction = -1
 		slime.flip_h = false
 	position.y+= direction * speed * delta
