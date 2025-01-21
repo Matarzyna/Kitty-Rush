@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2n5cjovfdyn8"]
+[gd_scene load_steps=19 format=3 uid="uid://c2n5cjovfdyn8"]
 
 [ext_resource type="Texture2D" uid="uid://d2ddykq3y2xk3" path="res://assets/Sprites/PurpleDungeon/fast slime.png" id="1_fjevp"]
 [ext_resource type="PackedScene" uid="uid://id0l3ei3a4pe" path="res://killzone.tscn" id="2_alteb"]
@@ -8,21 +8,30 @@ script/source = "extends Node2D
 
 const NORMAL_SPEED = 40      # Normalna prędkość
 const CHASE_SPEED = 60       # Przyspieszona prędkość
-const DETECTION_RANGE = 100  # Zasięg wykrywania postaci
+const DETECTION_RANGE = 40  # Zasięg wykrywania postaci
+
+@onready var slime: AnimatedSprite2D = $AnimatedSprite2D
+
+@export var damage = 1
 
 var direction = -1
 var player = null  # Referencja do postaci gracza
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
-@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+#@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready():
+	slime.play(\"normal\")
 	# Pobierz gracza z grupy 'player'
 	var players = get_tree().get_nodes_in_group(\"player\")
 	if players.size() > 0:
 		player = players[0]
 	else:
 		print(\"Nie znaleziono gracza w grupie 'player'!\")
+		
+	var killzone = get_node(\"Killzone\")
+	killzone.damage = damage
+	
 		
 func _process(delta: float) -> void:
 	var speed = NORMAL_SPEED
@@ -32,14 +41,16 @@ func _process(delta: float) -> void:
 		var distance = global_position.distance_to(player.global_position)
 		if distance <= DETECTION_RANGE:
 			speed = CHASE_SPEED  # Przyspiesz, jeśli gracz jest blisko
-	
+			slime.play(\"fast\")
+		else:
+			slime.play(\"normal\")
 	# Wykrywanie kolizji z użyciem RayCast2D
 	if ray_cast_right.is_colliding():
 		direction = -1
-		animated_sprite.flip_h = true
+		slime.flip_h = true
 	if ray_cast_left.is_colliding():
 		direction = 1
-		animated_sprite.flip_h = false
+		slime.flip_h = false
 	
 	# Ruch wroga
 	position.x += direction * speed * delta
@@ -73,6 +84,30 @@ region = Rect2(192, 16, 32, 16)
 atlas = ExtResource("1_fjevp")
 region = Rect2(224, 16, 32, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1675"]
+atlas = ExtResource("1_fjevp")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcu8e"]
+atlas = ExtResource("1_fjevp")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxv7p"]
+atlas = ExtResource("1_fjevp")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du7ui"]
+atlas = ExtResource("1_fjevp")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqlgw"]
+atlas = ExtResource("1_fjevp")
+region = Rect2(128, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbbn0"]
+atlas = ExtResource("1_fjevp")
+region = Rect2(160, 0, 32, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_i3ft0"]
 animations = [{
 "frames": [{
@@ -98,8 +133,31 @@ animations = [{
 "texture": SubResource("AtlasTexture_3i8ye")
 }],
 "loop": true,
-"name": &"default",
+"name": &"fast",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1675")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcu8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxv7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_du7ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqlgw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbbn0")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 2.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gbj3c"]
@@ -111,7 +169,8 @@ script = SubResource("GDScript_exyag")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -7)
 sprite_frames = SubResource("SpriteFrames_i3ft0")
-autoplay = "default"
+animation = &"normal"
+frame_progress = 0.46305
 flip_h = true
 
 [node name="RayCastRight" type="RayCast2D" parent="."]

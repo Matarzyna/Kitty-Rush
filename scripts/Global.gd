@@ -6,7 +6,8 @@ var pause_menu = null
 
 var cat_counter = 0  # Licznik zwykłych kotków
 var gruby_cat_counter = 0  # Licznik grubych kotków
-
+var key_counter = false
+signal wygranaMinigra
 var life = 5
 var globalLife = 5
 var death_position = Vector2(-104,80)
@@ -18,16 +19,25 @@ var boxes_state = {} # Przechowuje stany kartonow
 var gruby_cats_state = {}  # Przechowuje stany grubych kotków
 var chests_state = {}  # Przechowuje stany skrzynek
 
+var Cat_chests_state = {}  # Przechowuje stany skrzynek
+var game_chests_state = {}  # Przechowuje stany skrzynek
+
+var is_mini_game_won = false
+
 func set_paused(is_paused):
 	paused = is_paused
 
 func reset_kitty_counter():
 	cat_counter = 0
 	gruby_cat_counter = 0
+	
+func reset_key_counter():
+	key_counter = 0
 		
 func reset_life():
 	globalLife = 5
 	life = 5
+
 
 func reset_position():
 	death_position = Vector2(-104,80)
@@ -55,7 +65,14 @@ func reset_boxes_state():
 			box.reset_box()
 			print("Zresetowano karton: ", box.name)
 
+	for c in Cat_chests_state:
+		Cat_chests_state[c] = {"is_opened": false}
+	for gamechest in game_chests_state:
+		game_chests_state[gamechest] = {"is_opened": false}
+
+
 func reset_game():
+	reset_key_counter()
 	reset_kitty_counter()
 	reset_life()
 	reset_position()

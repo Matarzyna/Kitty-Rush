@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqsyu7en45lry"]
+
+[ext_resource type="Script" path="res://złoty_klucz.gd" id="1_1a5jj"]
+[ext_resource type="Texture2D" uid="uid://chtu083wigwrg" path="res://assets/keysmall.png" id="2_77k4l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nuck6"]
+size = Vector2(16.485, 22.7707)
+
+[node name="Kluczyk" type="Area2D"]
+scale = Vector2(0.38798, 0.371287)
+collision_mask = 4
+script = ExtResource("1_1a5jj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6.63003, -1.88288)
+shape = SubResource("RectangleShape2D_nuck6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5.69462, -2.78109)
+texture = ExtResource("2_77k4l")
+centered = false
+offset = Vector2(-14, -12)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
