@@ -88,7 +88,7 @@ animations = [{
 size = Vector2(32, 28)
 
 [node name="game_chest" type="Node2D"]
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.47, 0.47)
 script = ExtResource("1_sjxe2")
 
 [node name="gameChestSprite" type="AnimatedSprite2D" parent="."]
