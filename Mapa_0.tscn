@@ -1,7 +1,7 @@
 [gd_scene load_steps=76 format=4 uid="uid://cg2de6wjkemhw"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_bb18c"]
-[ext_resource type="Texture2D" uid="uid://b6neg4hgcnti1" path="res://assets/Tiny Wonder UI Free/sprite sheet 16x16px seamless textures.png" id="1_or2n3"]
+[ext_resource type="Texture2D" uid="uid://b6neg4hgcnti1" path="res://assets/sprite sheet 16x16px seamless textures.png" id="1_or2n3"]
 [ext_resource type="PackedScene" uid="uid://dkg5oq12g8h0l" path="res://life_canvas_layer.tscn" id="2_g4ab4"]
 [ext_resource type="Script" path="res://scripts/save_manager.gd" id="2_s5fve"]
 [ext_resource type="Texture2D" uid="uid://oiekbjeyn6uw" path="res://assets/rozowe cegielki.png" id="3_1g3ng"]
@@ -5699,6 +5699,39 @@ position = Vector2(1832, 256)
 [node name="SlimeUD30" parent="Slimes" instance=ExtResource("12_pkg0m")]
 position = Vector2(1864, 256)
 
+[node name="SlimeUD2" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(4664, -416)
+
+[node name="SlimeUD31" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(4648, -392)
+
+[node name="SlimeUD32" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(4632, -416)
+
+[node name="SlimeUD33" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(4616, -392)
+
+[node name="SlimeUD35" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(2520, -256)
+
+[node name="SlimeUD36" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(2544, -272)
+
+[node name="SlimeUD37" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(2576, -256)
+
+[node name="SlimeUD38" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(1640, 272)
+
+[node name="SlimeUD59" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(1672, 248)
+
+[node name="SlimeUD60" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(1720, 16)
+
+[node name="SlimeUD61" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(696, 168)
+
 [node name="Checkpoints" type="Node2D" parent="."]
 z_index = 2
 
@@ -5777,9 +5810,6 @@ position = Vector2(4296, -384)
 [node name="PauseCanvas" parent="." instance=ExtResource("22_kyv12")]
 
 [node name="GameOverCanvas" parent="." instance=ExtResource("23_3sqkn")]
-
-[node name="SlimeUD" parent="." instance=ExtResource("12_pkg0m")]
-position = Vector2(696, 168)
 
 [node name="Pułapki" type="Node2D" parent="."]
 
@@ -5978,6 +6008,57 @@ position = Vector2(3008, 48)
 
 [node name="CatChest14" parent="Chests" instance=ExtResource("42_3hjtf")]
 position = Vector2(3088, 48)
+
+[node name="life_chest8" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(3528, -128)
+
+[node name="life_chest9" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(3208, 0)
+
+[node name="life_chest18" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(3352, -112)
+
+[node name="life_chest19" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(3280, -192)
+
+[node name="life_chest20" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(3464, -64)
+
+[node name="CatChest15" parent="Chests" instance=ExtResource("42_3hjtf")]
+position = Vector2(3560, -128)
+
+[node name="CatChest16" parent="Chests" instance=ExtResource("42_3hjtf")]
+position = Vector2(3520, 96)
+
+[node name="CatChest17" parent="Chests" instance=ExtResource("42_3hjtf")]
+position = Vector2(3584, 96)
+
+[node name="life_chest21" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(3504, -16)
+
+[node name="life_chest22" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(3376, 96)
+
+[node name="life_chest23" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(3736, -16)
+
+[node name="life_chest24" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(4080, -176)
+
+[node name="life_chest25" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(4768, -224)
+
+[node name="life_chest26" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(4560, -400)
+
+[node name="life_chest27" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(4464, -416)
+
+[node name="CatChest18" parent="Chests" instance=ExtResource("42_3hjtf")]
+position = Vector2(3944, -480)
+
+[node name="CatChest19" parent="Chests" instance=ExtResource("42_3hjtf")]
+position = Vector2(4792, -144)
 
 [node name="Boxes" type="Node2D" parent="."]
 position = Vector2(280, 96)
@@ -6378,9 +6459,6 @@ position = Vector2(4064, -576)
 [node name="Bush4" parent="Boxes" instance=ExtResource("7_pcpim")]
 position = Vector2(4080, -480)
 
-[node name="life_chest" parent="." instance=ExtResource("24_woslb")]
-position = Vector2(3528, -128)
-
 [node name="MiniGra" type="Node2D" parent="."]
 
 [node name="game_chest" parent="MiniGra" instance=ExtResource("24_eufw4")]
@@ -6392,41 +6470,8 @@ position = Vector2(2424, 32)
 [node name="game_chest3" parent="MiniGra" instance=ExtResource("24_eufw4")]
 position = Vector2(3112, 112)
 
-[node name="life_chest" parent="MiniGra" instance=ExtResource("24_woslb")]
-position = Vector2(3208, 0)
-
-[node name="life_chest2" parent="MiniGra" instance=ExtResource("24_woslb")]
-position = Vector2(3352, -112)
-
-[node name="life_chest3" parent="MiniGra" instance=ExtResource("24_woslb")]
-position = Vector2(3280, -192)
-
-[node name="life_chest4" parent="MiniGra" instance=ExtResource("24_woslb")]
-position = Vector2(3464, -64)
-
-[node name="CatChest" parent="MiniGra" instance=ExtResource("42_3hjtf")]
-position = Vector2(3560, -128)
-
 [node name="game_chest4" parent="MiniGra" instance=ExtResource("24_eufw4")]
 position = Vector2(3552, 80)
-
-[node name="CatChest2" parent="MiniGra" instance=ExtResource("42_3hjtf")]
-position = Vector2(3520, 96)
-
-[node name="CatChest3" parent="MiniGra" instance=ExtResource("42_3hjtf")]
-position = Vector2(3584, 96)
-
-[node name="life_chest5" parent="MiniGra" instance=ExtResource("24_woslb")]
-position = Vector2(3504, -16)
-
-[node name="life_chest6" parent="MiniGra" instance=ExtResource("24_woslb")]
-position = Vector2(3376, 96)
-
-[node name="life_chest7" parent="MiniGra" instance=ExtResource("24_woslb")]
-position = Vector2(3736, -16)
-
-[node name="life_chest8" parent="MiniGra" instance=ExtResource("24_woslb")]
-position = Vector2(4080, -176)
 
 [node name="game_chest5" parent="MiniGra" instance=ExtResource("24_eufw4")]
 position = Vector2(4144, -176)
@@ -6434,56 +6479,11 @@ position = Vector2(4144, -176)
 [node name="game_chest6" parent="MiniGra" instance=ExtResource("24_eufw4")]
 position = Vector2(4664, -128)
 
-[node name="life_chest9" parent="MiniGra" instance=ExtResource("24_woslb")]
-position = Vector2(4768, -224)
-
-[node name="life_chest10" parent="MiniGra" instance=ExtResource("24_woslb")]
-position = Vector2(4560, -400)
-
-[node name="life_chest11" parent="MiniGra" instance=ExtResource("24_woslb")]
-position = Vector2(4464, -416)
-
 [node name="game_chest7" parent="MiniGra" instance=ExtResource("24_eufw4")]
 position = Vector2(4256, -384)
-
-[node name="CatChest4" parent="MiniGra" instance=ExtResource("42_3hjtf")]
-position = Vector2(3944, -480)
-
-[node name="CatChest" parent="." instance=ExtResource("42_3hjtf")]
-position = Vector2(4792, -144)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = 3
 position = Vector2(-16, -8)
 tile_map_data = PackedByteArray("AACrAO3/AAAPAAgAAACsAO3/AAAQAAgAAACsAO7/AAARAAsAAACrAO7/AAARAAsAAADKAPf/AAACAAUAAADKAPj/AAACAAUAAADLAPf/AAARAAkAAADLAPj/AAAOAAkAAADMAPj/AAARAAkAAADMAPf/AAAOAAoAAADLAPn/AAAOAAoAAADKAPn/AAAQAAQAAADhAPb/AAACAAUAAADhAPf/AAACAAUAAADhAPj/AAACAAUAAADhAPn/AAAQAAQAAADiAPn/AAAPAAQAAADiAPj/AAAHAAUAAADiAPf/AAAHAAUAAADiAPb/AAAPAAMAAAAyAej/AAAFAAoAAAAyAer/AAAFAAsAAAAyAen/AAARAAkAAADMAPn/AAAWAAgAAAA=")
 tile_set = SubResource("TileSet_vkxps")
-
-[node name="SlimeUD2" parent="." instance=ExtResource("12_pkg0m")]
-position = Vector2(4664, -416)
-
-[node name="SlimeUD3" parent="." instance=ExtResource("12_pkg0m")]
-position = Vector2(4648, -392)
-
-[node name="SlimeUD4" parent="." instance=ExtResource("12_pkg0m")]
-position = Vector2(4632, -416)
-
-[node name="SlimeUD5" parent="." instance=ExtResource("12_pkg0m")]
-position = Vector2(4616, -392)
-
-[node name="SlimeUD6" parent="." instance=ExtResource("12_pkg0m")]
-position = Vector2(2520, -256)
-
-[node name="SlimeUD7" parent="." instance=ExtResource("12_pkg0m")]
-position = Vector2(2544, -272)
-
-[node name="SlimeUD8" parent="." instance=ExtResource("12_pkg0m")]
-position = Vector2(2576, -256)
-
-[node name="SlimeUD9" parent="." instance=ExtResource("12_pkg0m")]
-position = Vector2(1640, 272)
-
-[node name="SlimeUD10" parent="." instance=ExtResource("12_pkg0m")]
-position = Vector2(1672, 248)
-
-[node name="SlimeUD11" parent="." instance=ExtResource("12_pkg0m")]
-position = Vector2(1720, 16)
