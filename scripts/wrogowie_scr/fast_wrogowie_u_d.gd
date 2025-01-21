@@ -13,7 +13,7 @@ var player = null  # Referencja do postaci gracza
 @onready var slime: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready():
-	slime.play("normal")
+	slime.play("default")
 	# Pobierz gracza z grupy 'player'
 	var players = get_tree().get_nodes_in_group("player")
 	if players.size() > 0:
@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 			speed = CHASE_SPEED  # Przyspiesz, jeśli gracz jest blisko
 			slime.play("fast")
 		else:
-			slime.play("normal")
+			slime.play("default")
 		
 	if ray_cast_up.is_colliding():
 		direction = 1

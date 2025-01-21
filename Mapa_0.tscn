@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://cg2de6wjkemhw"]
+[gd_scene load_steps=76 format=4 uid="uid://cg2de6wjkemhw"]
 
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_bb18c"]
 [ext_resource type="Texture2D" uid="uid://b6neg4hgcnti1" path="res://assets/sprite sheet 16x16px seamless textures.png" id="1_or2n3"]
@@ -42,8 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://133shwfx0h5n" path="res://assets/GrubyKot/7.png" id="36_54fjj"]
 [ext_resource type="Texture2D" uid="uid://d4dcqecgfe1wc" path="res://assets/GrubyKot/8.png" id="37_m6koq"]
 [ext_resource type="Texture2D" uid="uid://dl0yhcc2ahv0v" path="res://assets/GrubyKot/9.png" id="38_8i5rw"]
-[ext_resource type="PackedScene" uid="uid://csnejn2m0uimx" path="res://wrogowie_tscn/fast_wrogowieU_D.tscn" id="38_bn2kx"]
-[ext_resource type="PackedScene" uid="uid://csnejn2m0uimx" path="res://fast_wrogowieU_D.tscn" id="38_hewqe"]
+[ext_resource type="PackedScene" uid="uid://csnejn2m0uimx" path="res://fast_wrogowieU_D.tscn" id="38_bn2kx"]
 [ext_resource type="Texture2D" uid="uid://c7r2vmeobcc4e" path="res://assets/GrubyKot/10.png" id="39_0xfqp"]
 [ext_resource type="PackedScene" uid="uid://c46fmpumlh6av" path="res://flag.tscn" id="40_7xom1"]
 [ext_resource type="PackedScene" uid="uid://clu67betaobjv" path="res://sceny do poziomów/CatChest.tscn" id="42_3hjtf"]
@@ -4282,10 +4281,8 @@ tile_map_data = PackedByteArray("AACrAO3/AAAPAAgAAACsAO3/AAAQAAgAAACsAO7/AAARAAs
 tile_set = SubResource("TileSet_vkxps")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("2_g4ab4")]
-visible = false
 
 [node name="CanvasLayerKC" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayerKC"]
 position = Vector2(1065.6, 42.0775)
@@ -4318,7 +4315,6 @@ scale = Vector2(0.078125, 0.078125)
 texture = ExtResource("19_vgktk")
 
 [node name="FatCatCounter" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("30_6ca44")
 
 [node name="Fat Kitty Couter" type="Label" parent="FatCatCounter"]
@@ -5520,13 +5516,13 @@ position = Vector2(1224, 80)
 [node name="slimeLR7" parent="Slimes" instance=ExtResource("6_bx2o1")]
 position = Vector2(1240, 72)
 
-[node name="SlimeUD21" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD21" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(1000, -16)
 
-[node name="SlimeUD22" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD22" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(1032, -24)
 
-[node name="SlimeUD23" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD23" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(1064, -24)
 
 [node name="slimeLR10" parent="Slimes" instance=ExtResource("13_8ya4u")]
@@ -5547,7 +5543,7 @@ position = Vector2(1240, -136)
 [node name="slime" parent="Slimes" instance=ExtResource("6_bx2o1")]
 position = Vector2(536, 112)
 
-[node name="SlimeUD25" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD25" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(968, -16)
 
 [node name="SlimeUD2" parent="Slimes" instance=ExtResource("12_pkg0m")]
@@ -5556,28 +5552,28 @@ position = Vector2(1720, 8)
 [node name="SlimeUD8" parent="Slimes" instance=ExtResource("12_pkg0m")]
 position = Vector2(1472, -88)
 
-[node name="SlimeUD26" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD26" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(1640, 280)
 
-[node name="SlimeUD27" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD27" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(1672, 280)
 
-[node name="SlimeUD28" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD28" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(1784, 328)
 
-[node name="SlimeUD29" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD29" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(1800, 304)
 
-[node name="SlimeUD30" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD30" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(1816, 280)
 
-[node name="SlimeUD31" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD31" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(1832, 256)
 
-[node name="SlimeUD32" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD32" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(1848, 280)
 
-[node name="SlimeUD33" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD33" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(1864, 304)
 
 [node name="slimeLR8" parent="Slimes" instance=ExtResource("6_bx2o1")]
@@ -5595,10 +5591,10 @@ position = Vector2(2520, -288)
 [node name="SlimeUD36" parent="Slimes" instance=ExtResource("12_pkg0m")]
 position = Vector2(2568, -288)
 
-[node name="SlimeUD37" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD37" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(2536, -248)
 
-[node name="SlimeUD38" parent="Slimes" instance=ExtResource("38_hewqe")]
+[node name="SlimeUD38" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(2584, -248)
 
 [node name="SlimeUD39" parent="Slimes" instance=ExtResource("12_pkg0m")]
@@ -5818,7 +5814,6 @@ position = Vector2(4576, -400)
 position = Vector2(4320, -384)
 
 [node name="PauseCanvas" parent="." instance=ExtResource("22_kyv12")]
-visible = false
 
 [node name="GameOverCanvas" parent="." instance=ExtResource("23_3sqkn")]
 

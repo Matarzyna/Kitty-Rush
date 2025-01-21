@@ -89,7 +89,7 @@ func handle_input():
 			elif ray.get_collider().is_in_group("Box"):
 				if ray.get_collider().start_movement(Vector2.LEFT):
 					start_movement(Vector2.LEFT, "walk_l")
-					await get_tree().create_timer(0.2).timeout
+					await get_tree().create_timer(0.35).timeout
 	
 	elif Input.is_action_pressed("ui_right"):
 		ray.set_target_position(Vector2.RIGHT * ray_range)
@@ -103,7 +103,7 @@ func handle_input():
 			elif ray.get_collider().is_in_group("Box"):
 				if ray.get_collider().start_movement(Vector2.RIGHT):
 					start_movement(Vector2.RIGHT, "walk_r")
-					await get_tree().create_timer(0.2).timeout
+					await get_tree().create_timer(0.35).timeout
 	
 	else:
 		if (face_direction == "right"):

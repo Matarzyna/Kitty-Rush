@@ -25,7 +25,7 @@ func _ready() -> void:
 
 func _physics_process(delta):
 	# Add the gravity.
-	ray_down.set_target_position(Vector2.DOWN * 9)
+	ray_down.set_target_position(Vector2.DOWN * 8)
 	ray_down.force_raycast_update()
 	if !ray_down.is_colliding() :
 		if not is_fall:
@@ -42,29 +42,34 @@ func _physics_process(delta):
 			move(Vector2.DOWN)
 	elif is_moving == false:
 		if ruchome:
-			ray_down.set_target_position(Vector2.DOWN * 9)
+			ray_down.set_target_position(Vector2.DOWN * 8)
 			ray_down.force_raycast_update()
 			$RayCastRight.force_raycast_update()
 			$RayCastLeft.force_raycast_update()
 			if ray_down.get_collider():
 				if ray_down.get_collider().is_in_group('player'):
 					poczekac = true
-				if ray_down.get_collider().is_in_group('Box') :
+				elif ray_down.get_collider().is_in_group('Box') :
 					ray.set_target_position(Vector2.RIGHT * 23)
 					ray.force_raycast_update()
-					if (!ray.get_collider() and !$RayCastRight.is_colliding()) or ($RayCastRight.get_collider() and !$RayCastRight.get_collider().is_in_group('player')):
+					if (!ray.is_colliding() and !$RayCastRight.is_colliding()):
 						move(Vector2.RIGHT)
 						is_fall = true
 						ruchome = true
 						move(Vector2.DOWN)
 					else:
-						ray.set_target_position(Vector2.LEFT * 23)
-						ray.force_raycast_update()
-						if (!ray.get_collider() and !$RayCastLeft.is_colliding()) or ($RayCastLeft.get_collider() and !$RayCastLeft.get_collider().is_in_group('player')):
-							move(Vector2.LEFT)
-							is_fall = true
-							ruchome = true
-							move(Vector2.DOWN)
+						is_fall = false
+						ruchome = false
+					ray.set_target_position(Vector2.LEFT * 23)
+					ray.force_raycast_update()
+					if (!ray.is_colliding() and !$RayCastLeft.is_colliding()):
+						move(Vector2.LEFT)
+						is_fall = true
+						ruchome = true
+						move(Vector2.DOWN)
+					else:
+						is_fall = false
+						ruchome = false
 	else:
 		is_fall = false
 	saving_position = position
