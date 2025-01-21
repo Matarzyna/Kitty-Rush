@@ -25,7 +25,7 @@ func _ready() -> void:
 
 func _physics_process(delta):
 	# Add the gravity.
-	ray_down.set_target_position(Vector2.DOWN * 8)
+	ray_down.set_target_position(Vector2.DOWN * 8.1)
 	ray_down.force_raycast_update()
 	if !ray_down.is_colliding() :
 		if not is_fall:
@@ -42,7 +42,7 @@ func _physics_process(delta):
 			move(Vector2.DOWN)
 	elif is_moving == false:
 		if ruchome:
-			ray_down.set_target_position(Vector2.DOWN * 8)
+			ray_down.set_target_position(Vector2.DOWN * 8.1)
 			ray_down.force_raycast_update()
 			$RayCastRight.force_raycast_update()
 			$RayCastLeft.force_raycast_update()
