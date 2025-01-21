@@ -5086,6 +5086,42 @@ position = Vector2(4832, -480)
 [node name="Bush248" parent="Bushes" instance=ExtResource("7_pcpim")]
 position = Vector2(4832, -520)
 
+[node name="Bush249" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4416, -592)
+
+[node name="Bush250" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4432, -592)
+
+[node name="Bush251" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4448, -592)
+
+[node name="Bush252" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4464, -592)
+
+[node name="Bush253" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4160, -592)
+
+[node name="Bush254" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4160, -576)
+
+[node name="Bush255" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4160, -560)
+
+[node name="Bush256" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4144, -592)
+
+[node name="Bush257" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4144, -608)
+
+[node name="Bush258" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4160, -624)
+
+[node name="Bush259" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4176, -624)
+
+[node name="Bush260" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4208, -592)
+
 [node name="Kotki" type="Node2D" parent="."]
 position = Vector2(200, 160)
 
@@ -5392,6 +5428,18 @@ position = Vector2(4832, -472)
 [node name="kotek99" parent="Kotki" instance=ExtResource("9_4yl4x")]
 position = Vector2(4832, -504)
 
+[node name="kotek100" parent="Kotki" instance=ExtResource("9_4yl4x")]
+position = Vector2(4416, -632)
+
+[node name="kotek101" parent="Kotki" instance=ExtResource("9_4yl4x")]
+position = Vector2(4432, -632)
+
+[node name="kotek102" parent="Kotki" instance=ExtResource("9_4yl4x")]
+position = Vector2(4448, -632)
+
+[node name="kotek103" parent="Kotki" instance=ExtResource("9_4yl4x")]
+position = Vector2(4464, -632)
+
 [node name="Slimes" type="Node2D" parent="."]
 
 [node name="SlimeUD" parent="Slimes" instance=ExtResource("12_pkg0m")]
@@ -5643,6 +5691,57 @@ position = Vector2(4856, -136)
 [node name="SlimeUD51" parent="Slimes" instance=ExtResource("12_pkg0m")]
 position = Vector2(4872, -160)
 
+[node name="SlimeUD52" parent="Slimes" instance=ExtResource("38_bn2kx")]
+position = Vector2(4840, -392)
+
+[node name="SlimeUD53" parent="Slimes" instance=ExtResource("38_bn2kx")]
+position = Vector2(4856, -448)
+
+[node name="SlimeUD54" parent="Slimes" instance=ExtResource("38_bn2kx")]
+position = Vector2(4872, -424)
+
+[node name="SlimeUD55" parent="Slimes" instance=ExtResource("38_bn2kx")]
+position = Vector2(4888, -392)
+
+[node name="SlimeUD56" parent="Slimes" instance=ExtResource("38_bn2kx")]
+position = Vector2(4920, -448)
+
+[node name="SlimeUD57" parent="Slimes" instance=ExtResource("38_bn2kx")]
+position = Vector2(4904, -424)
+
+[node name="SlimeUD58" parent="Slimes" instance=ExtResource("38_bn2kx")]
+position = Vector2(4936, -392)
+
+[node name="SlimeUD59" parent="Slimes" instance=ExtResource("38_bn2kx")]
+position = Vector2(4616, -416)
+
+[node name="SlimeUD60" parent="Slimes" instance=ExtResource("38_bn2kx")]
+position = Vector2(4632, -408)
+
+[node name="SlimeUD61" parent="Slimes" instance=ExtResource("38_bn2kx")]
+position = Vector2(4648, -400)
+
+[node name="SlimeUD62" parent="Slimes" instance=ExtResource("38_bn2kx")]
+position = Vector2(4664, -392)
+
+[node name="SlimeUD63" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(4600, -392)
+
+[node name="SlimeUD64" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(4680, -464)
+
+[node name="SlimeUD65" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(4488, -392)
+
+[node name="SlimeUD66" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(4504, -432)
+
+[node name="SlimeUD67" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(4520, -392)
+
+[node name="SlimeUD68" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(4536, -432)
+
 [node name="Checkpoints" type="Node2D" parent="."]
 z_index = 2
 
@@ -5708,6 +5807,15 @@ position = Vector2(4688, -224)
 
 [node name="flag21" parent="Checkpoints" instance=ExtResource("9_efkol")]
 position = Vector2(4960, -128)
+
+[node name="flag22" parent="Checkpoints" instance=ExtResource("9_efkol")]
+position = Vector2(4816, -464)
+
+[node name="flag23" parent="Checkpoints" instance=ExtResource("9_efkol")]
+position = Vector2(4576, -400)
+
+[node name="flag24" parent="Checkpoints" instance=ExtResource("9_efkol")]
+position = Vector2(4320, -384)
 
 [node name="PauseCanvas" parent="." instance=ExtResource("22_kyv12")]
 visible = false
@@ -5808,6 +5916,12 @@ position = Vector2(4872, -336)
 
 [node name="OgienPo25" parent="Pułapki" instance=ExtResource("27_usaxl")]
 position = Vector2(4872, -320)
+
+[node name="OgienPo26" parent="Pułapki" instance=ExtResource("27_usaxl")]
+position = Vector2(4760, -416)
+
+[node name="OgienPo27" parent="Pułapki" instance=ExtResource("27_usaxl")]
+position = Vector2(4760, -448)
 
 [node name="Gruby" type="Node2D" parent="." groups=["FatCats"]]
 
@@ -6296,6 +6410,57 @@ position = Vector2(4768, -336)
 [node name="Skrzynka126" parent="Boxes" instance=ExtResource("42_cyp0x")]
 position = Vector2(4752, -352)
 
+[node name="Skrzynka127" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4336, -544)
+
+[node name="Skrzynka128" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4352, -544)
+
+[node name="Skrzynka129" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4368, -544)
+
+[node name="Skrzynka130" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4384, -544)
+
+[node name="Skrzynka131" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4096, -512)
+
+[node name="Skrzynka132" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4096, -496)
+
+[node name="Skrzynka133" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4112, -496)
+
+[node name="Skrzynka134" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4112, -528)
+
+[node name="Skrzynka135" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4128, -544)
+
+[node name="Skrzynka136" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4096, -544)
+
+[node name="Skrzynka137" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4080, -576)
+
+[node name="Skrzynka138" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4080, -544)
+
+[node name="Skrzynka139" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(4064, -560)
+
+[node name="Bush" parent="Boxes" instance=ExtResource("7_pcpim")]
+position = Vector2(4096, -528)
+
+[node name="Bush2" parent="Boxes" instance=ExtResource("7_pcpim")]
+position = Vector2(4112, -512)
+
+[node name="Bush3" parent="Boxes" instance=ExtResource("7_pcpim")]
+position = Vector2(4064, -576)
+
+[node name="Bush4" parent="Boxes" instance=ExtResource("7_pcpim")]
+position = Vector2(4080, -480)
+
 [node name="life_chest" parent="." instance=ExtResource("24_woslb")]
 position = Vector2(3528, -128)
 
@@ -6354,6 +6519,18 @@ position = Vector2(4664, -128)
 
 [node name="life_chest9" parent="MiniGra" instance=ExtResource("24_woslb")]
 position = Vector2(4768, -224)
+
+[node name="life_chest10" parent="MiniGra" instance=ExtResource("24_woslb")]
+position = Vector2(4560, -400)
+
+[node name="life_chest11" parent="MiniGra" instance=ExtResource("24_woslb")]
+position = Vector2(4464, -416)
+
+[node name="game_chest7" parent="MiniGra" instance=ExtResource("24_eufw4")]
+position = Vector2(4256, -384)
+
+[node name="CatChest4" parent="MiniGra" instance=ExtResource("42_3hjtf")]
+position = Vector2(3944, -480)
 
 [node name="CatChest" parent="." instance=ExtResource("42_3hjtf")]
 position = Vector2(4792, -144)
