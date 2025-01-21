@@ -88,8 +88,6 @@ animations = [{
 size = Vector2(17, 16)
 
 [node name="life_chest" type="Node2D" groups=["chests"]]
-light_mask = 2
-visibility_layer = 2
 script = ExtResource("1_kr6kd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

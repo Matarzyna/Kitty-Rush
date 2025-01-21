@@ -44,6 +44,7 @@
 [ext_resource type="Texture2D" uid="uid://dl0yhcc2ahv0v" path="res://assets/GrubyKot/9.png" id="38_8i5rw"]
 [ext_resource type="Texture2D" uid="uid://c7r2vmeobcc4e" path="res://assets/GrubyKot/10.png" id="39_0xfqp"]
 [ext_resource type="PackedScene" uid="uid://clu67betaobjv" path="res://CatChest.tscn" id="42_3hjtf"]
+[ext_resource type="PackedScene" uid="uid://b5rot6klfb6bq" path="res://skrzynka.tscn" id="42_cyp0x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_843ii"]
 texture = ExtResource("4_q38bg")
@@ -3890,17 +3891,6 @@ tile_set = SubResource("TileSet_1ocjt")
 z_index = 1
 position = Vector2(-88, 80)
 
-[node name="Chests" type="Node" parent="."]
-
-[node name="life_chest" parent="Chests" instance=ExtResource("24_woslb")]
-position = Vector2(872, 176)
-
-[node name="life_chest2" parent="Chests" instance=ExtResource("24_woslb")]
-position = Vector2(488, 144)
-
-[node name="life_chest3" parent="Chests" instance=ExtResource("24_woslb")]
-position = Vector2(304, 160)
-
 [node name="CanvasLayer" parent="." instance=ExtResource("2_g4ab4")]
 
 [node name="CanvasLayerKC" type="CanvasLayer" parent="."]
@@ -4357,16 +4347,33 @@ position = Vector2(1624, 176)
 
 [node name="Gruby" type="Node2D" parent="." groups=["FatCats"]]
 
-[node name="FatCatChest" type="Node2D" parent="." groups=["chests"]]
+[node name="Chests" type="Node2D" parent="."]
 
-[node name="CatChest" parent="FatCatChest" instance=ExtResource("42_3hjtf")]
+[node name="CatChest" parent="Chests" instance=ExtResource("42_3hjtf")]
 position = Vector2(-248, -16)
 scale = Vector2(0.84, 0.84)
 
-[node name="CatChest2" parent="FatCatChest" instance=ExtResource("42_3hjtf")]
+[node name="CatChest2" parent="Chests" instance=ExtResource("42_3hjtf")]
 position = Vector2(16, 80)
 scale = Vector2(0.84, 0.84)
 
-[node name="CatChest3" parent="FatCatChest" instance=ExtResource("42_3hjtf")]
+[node name="CatChest3" parent="Chests" instance=ExtResource("42_3hjtf")]
 position = Vector2(328, 160)
 scale = Vector2(0.84, 0.84)
+
+[node name="life_chest2" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(488, 144)
+
+[node name="life_chest3" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(304, 160)
+
+[node name="life_chest" parent="Chests" instance=ExtResource("24_woslb")]
+position = Vector2(872, 176)
+
+[node name="Boxes" type="Node2D" parent="."]
+position = Vector2(280, 96)
+
+[node name="Skrzynka" parent="Boxes" instance=ExtResource("42_cyp0x")]
+position = Vector2(0, 16)
+
+[node name="Skrzynka2" parent="Boxes" instance=ExtResource("42_cyp0x")]

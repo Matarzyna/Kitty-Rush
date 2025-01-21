@@ -119,6 +119,7 @@ func force_death():
 			print("Gracz został cofnięty do checkpointu:", Global.death_position)
 			update_ui_life(Global.life)
 			reset_bushes()
+			reset_boxes()
 	else:
 		print("Gracz nie został znaleziony!")
 
@@ -134,6 +135,13 @@ func reset_bushes():
 		if bush.has_method("reset_bush") and bush.is_destroy:
 			bush.reset_bush()
 			print("Zresetowano krzaczek: ", bush.name)
+			
+func reset_boxes():
+	var boxes = get_tree().get_nodes_in_group("Box")
+	for box in boxes:
+		if box.has_method("reset_box"):
+			box.reset_box()
+			print("Zresetowano karton: ", box.name)
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("force_death"):

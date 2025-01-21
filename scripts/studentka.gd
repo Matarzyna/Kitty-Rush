@@ -11,6 +11,7 @@ var is_moving = false  # Flaga kontrolująca, czy postać obecnie się porusza
 var move_direction = Vector2.ZERO  # Kierunek ruchu
 var move_timer = 0.0  # Licznik czasu dla ruchu
 var start_position = Vector2.ZERO  # Pozycja początkowa ruchu
+var ray_range = 21
 
 var is_destroy = false
 var is_lost_hp = false
@@ -36,7 +37,6 @@ func _physics_process(delta):
 				notify_game_manager_check_life()
 				if Global.life == 0:
 					notify_game_manager_force_death()
-				
 	elif is_destroy:
 			is_destroy = false
 	else:
@@ -50,11 +50,11 @@ func notify_game_manager_check_life():
 func notify_game_manager_force_death():
 	var game_manager = get_tree().get_nodes_in_group("GameManager")[0]
 	if game_manager:
-		game_manager.force_death()
+		await game_manager.force_death()
 
 func handle_input():
 	if Input.is_action_pressed("ui_up"):
-		ray.set_target_position(Vector2.UP * 16)
+		ray.set_target_position(Vector2.UP * ray_range)
 		ray.force_raycast_update()
 		if !ray.is_colliding():
 			if(face_direction == "right"):
@@ -62,10 +62,11 @@ func handle_input():
 			else:
 				start_movement(Vector2.UP, "clime_l")
 		elif Input.is_action_pressed("ui_accept"):
-			start_attack(face_direction)
+			if ray.get_collider().is_in_group("bushes"):
+				start_attack(face_direction)
 	
 	elif Input.is_action_pressed("ui_down"):
-		ray.set_target_position(Vector2.DOWN * 16)
+		ray.set_target_position(Vector2.DOWN * ray_range)
 		ray.force_raycast_update()
 		if !ray.is_colliding():
 			if(face_direction == "right"):
@@ -73,25 +74,36 @@ func handle_input():
 			else:
 				start_movement(Vector2.DOWN, "clime_l")
 		elif Input.is_action_pressed("ui_accept"):
-			start_attack(face_direction)
+			if ray.get_collider().is_in_group("bushes"):
+				start_attack(face_direction)
 	
 	elif Input.is_action_pressed("ui_left"):
-		ray.set_target_position(Vector2.LEFT * 16)
+		ray.set_target_position(Vector2.LEFT * ray_range)
 		ray.force_raycast_update()
 		face_direction = "left"
 		if !ray.is_colliding():
 			start_movement(Vector2.LEFT, "walk_l")
 		elif Input.is_action_pressed("ui_accept"):
-			start_attack(face_direction)
+			if ray.get_collider().is_in_group("bushes"):
+				start_attack(face_direction)
+			elif ray.get_collider().is_in_group("Box"):
+				if ray.get_collider().start_movement(Vector2.LEFT):
+					start_movement(Vector2.LEFT, "walk_l")
+					await get_tree().create_timer(0.2).timeout
 	
 	elif Input.is_action_pressed("ui_right"):
-		ray.set_target_position(Vector2.RIGHT * 16)
+		ray.set_target_position(Vector2.RIGHT * ray_range)
 		ray.force_raycast_update()
 		face_direction = "right"
 		if !ray.is_colliding():
 			start_movement(Vector2.RIGHT, "walk_r")
 		elif Input.is_action_pressed("ui_accept"):
-			start_attack(face_direction)
+			if ray.get_collider().is_in_group("bushes"):
+				start_attack(face_direction)
+			elif ray.get_collider().is_in_group("Box"):
+				if ray.get_collider().start_movement(Vector2.RIGHT):
+					start_movement(Vector2.RIGHT, "walk_r")
+					await get_tree().create_timer(0.2).timeout
 	
 	else:
 		if (face_direction == "right"):
