@@ -5115,6 +5115,18 @@ position = Vector2(4208, -592)
 [node name="Bush261" parent="Bushes" instance=ExtResource("7_pcpim")]
 position = Vector2(2304, -352)
 
+[node name="Bush262" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4096, -528)
+
+[node name="Bush263" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4112, -512)
+
+[node name="Bush264" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4064, -576)
+
+[node name="Bush265" parent="Bushes" instance=ExtResource("7_pcpim")]
+position = Vector2(4080, -480)
+
 [node name="Kotki" type="Node2D" parent="."]
 position = Vector2(200, 160)
 
@@ -6446,18 +6458,6 @@ position = Vector2(4080, -544)
 
 [node name="Skrzynka139" parent="Boxes" instance=ExtResource("42_cyp0x")]
 position = Vector2(4064, -560)
-
-[node name="Bush" parent="Boxes" instance=ExtResource("7_pcpim")]
-position = Vector2(4096, -528)
-
-[node name="Bush2" parent="Boxes" instance=ExtResource("7_pcpim")]
-position = Vector2(4112, -512)
-
-[node name="Bush3" parent="Boxes" instance=ExtResource("7_pcpim")]
-position = Vector2(4064, -576)
-
-[node name="Bush4" parent="Boxes" instance=ExtResource("7_pcpim")]
-position = Vector2(4080, -480)
 
 [node name="MiniGra" type="Node2D" parent="."]
 
