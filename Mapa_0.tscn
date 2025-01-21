@@ -5543,33 +5543,6 @@ position = Vector2(536, 112)
 [node name="SlimeUD25" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(968, -16)
 
-[node name="SlimeUD2" parent="Slimes" instance=ExtResource("12_pkg0m")]
-position = Vector2(1720, 8)
-
-[node name="SlimeUD26" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(1640, 280)
-
-[node name="SlimeUD27" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(1672, 280)
-
-[node name="SlimeUD28" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(1784, 328)
-
-[node name="SlimeUD29" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(1800, 304)
-
-[node name="SlimeUD30" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(1816, 280)
-
-[node name="SlimeUD31" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(1832, 256)
-
-[node name="SlimeUD32" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(1848, 280)
-
-[node name="SlimeUD33" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(1864, 304)
-
 [node name="slimeLR8" parent="Slimes" instance=ExtResource("6_bx2o1")]
 position = Vector2(2552, -160)
 
@@ -5578,15 +5551,6 @@ position = Vector2(2614, -140)
 
 [node name="SlimeUD34" parent="Slimes" instance=ExtResource("12_pkg0m")]
 position = Vector2(2504, -136)
-
-[node name="SlimeUD35" parent="Slimes" instance=ExtResource("12_pkg0m")]
-position = Vector2(2520, -288)
-
-[node name="SlimeUD36" parent="Slimes" instance=ExtResource("12_pkg0m")]
-position = Vector2(2568, -288)
-
-[node name="SlimeUD37" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(2536, -248)
 
 [node name="SlimeUD39" parent="Slimes" instance=ExtResource("12_pkg0m")]
 position = Vector2(2728, -296)
@@ -5699,18 +5663,6 @@ position = Vector2(4904, -424)
 [node name="SlimeUD58" parent="Slimes" instance=ExtResource("38_bn2kx")]
 position = Vector2(4936, -392)
 
-[node name="SlimeUD59" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(4616, -416)
-
-[node name="SlimeUD60" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(4632, -408)
-
-[node name="SlimeUD61" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(4648, -400)
-
-[node name="SlimeUD62" parent="Slimes" instance=ExtResource("38_bn2kx")]
-position = Vector2(4664, -392)
-
 [node name="SlimeUD63" parent="Slimes" instance=ExtResource("12_pkg0m")]
 position = Vector2(4600, -392)
 
@@ -5728,6 +5680,24 @@ position = Vector2(4520, -392)
 
 [node name="SlimeUD68" parent="Slimes" instance=ExtResource("12_pkg0m")]
 position = Vector2(4536, -432)
+
+[node name="SlimeUD8" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(1784, 296)
+
+[node name="SlimeUD26" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(1816, 296)
+
+[node name="SlimeUD27" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(1848, 296)
+
+[node name="SlimeUD28" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(1800, 256)
+
+[node name="SlimeUD29" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(1832, 256)
+
+[node name="SlimeUD30" parent="Slimes" instance=ExtResource("12_pkg0m")]
+position = Vector2(1864, 256)
 
 [node name="Checkpoints" type="Node2D" parent="."]
 z_index = 2
@@ -6487,3 +6457,33 @@ z_index = 3
 position = Vector2(-16, -8)
 tile_map_data = PackedByteArray("AACrAO3/AAAPAAgAAACsAO3/AAAQAAgAAACsAO7/AAARAAsAAACrAO7/AAARAAsAAADKAPf/AAACAAUAAADKAPj/AAACAAUAAADLAPf/AAARAAkAAADLAPj/AAAOAAkAAADMAPj/AAARAAkAAADMAPf/AAAOAAoAAADLAPn/AAAOAAoAAADKAPn/AAAQAAQAAADhAPb/AAACAAUAAADhAPf/AAACAAUAAADhAPj/AAACAAUAAADhAPn/AAAQAAQAAADiAPn/AAAPAAQAAADiAPj/AAAHAAUAAADiAPf/AAAHAAUAAADiAPb/AAAPAAMAAAAyAej/AAAFAAoAAAAyAer/AAAFAAsAAAAyAen/AAARAAkAAADMAPn/AAAWAAgAAAA=")
 tile_set = SubResource("TileSet_vkxps")
+
+[node name="SlimeUD2" parent="." instance=ExtResource("12_pkg0m")]
+position = Vector2(4664, -416)
+
+[node name="SlimeUD3" parent="." instance=ExtResource("12_pkg0m")]
+position = Vector2(4648, -392)
+
+[node name="SlimeUD4" parent="." instance=ExtResource("12_pkg0m")]
+position = Vector2(4632, -416)
+
+[node name="SlimeUD5" parent="." instance=ExtResource("12_pkg0m")]
+position = Vector2(4616, -392)
+
+[node name="SlimeUD6" parent="." instance=ExtResource("12_pkg0m")]
+position = Vector2(2520, -256)
+
+[node name="SlimeUD7" parent="." instance=ExtResource("12_pkg0m")]
+position = Vector2(2544, -272)
+
+[node name="SlimeUD8" parent="." instance=ExtResource("12_pkg0m")]
+position = Vector2(2576, -256)
+
+[node name="SlimeUD9" parent="." instance=ExtResource("12_pkg0m")]
+position = Vector2(1640, 272)
+
+[node name="SlimeUD10" parent="." instance=ExtResource("12_pkg0m")]
+position = Vector2(1672, 248)
+
+[node name="SlimeUD11" parent="." instance=ExtResource("12_pkg0m")]
+position = Vector2(1720, 16)
